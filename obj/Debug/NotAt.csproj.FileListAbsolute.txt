@@ -1,0 +1,12 @@
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\bin\Debug\NotAt.exe.config
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\bin\Debug\NotAt.exe
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\bin\Debug\NotAt.pdb
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.csproj.AssemblyReference.cache
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.Properties.Resources.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.csproj.GenerateResource.cache
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.csproj.CoreCompileInputs.cache
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.exe
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.pdb
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.Form1.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.Form2.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\obj\Debug\NotAt.Form3.resources
