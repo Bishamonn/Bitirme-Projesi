@@ -1,0 +1,1 @@
+Bu uygulama bitirme projem olan "NotAt" için bir repo'dur. Not atmak, okumak, değiştirmek, görüntülemek ve özellikle bunların hepsini hızlı ve basit erişebilir şekilde yapabilmek için geliştirmekte olduğum bir uygulamadır.
