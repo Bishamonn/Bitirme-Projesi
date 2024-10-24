@@ -19,6 +19,16 @@ namespace NotAt
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            label1.Top = (this.ClientSize.Width - button1.Height) / 7;
+            button1.Left = (this.ClientSize.Width - button1.Width) / 2;
+            button2.Left = (this.ClientSize.Width - button1.Width) / 2;
+
+
+            // Maximize (Büyütme) düğmesini devre dışı bırak
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
 
             this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
         }

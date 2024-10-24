@@ -36,7 +36,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(142, 350);
+            this.button1.Location = new System.Drawing.Point(152, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 59);
             this.button1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(142, 253);
+            this.button2.Location = new System.Drawing.Point(152, 203);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 58);
             this.button2.TabIndex = 2;
@@ -71,11 +71,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(421, 467);
+            this.ClientSize = new System.Drawing.Size(421, 423);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
