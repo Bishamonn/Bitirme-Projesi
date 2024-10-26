@@ -58,3 +58,5 @@ C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Deb
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.csproj.Up2Date
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.Form5.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.Form6.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.FormNotification.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotForm.resources

@@ -35,7 +35,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(114, 107);
+            this.comboBox1.Location = new System.Drawing.Point(57, 45);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 0;
@@ -46,7 +46,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Admin",
             "Kullanıcı"});
-            this.comboBox2.Location = new System.Drawing.Point(114, 271);
+            this.comboBox2.Location = new System.Drawing.Point(57, 179);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 450);
+            this.ClientSize = new System.Drawing.Size(232, 278);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form5";

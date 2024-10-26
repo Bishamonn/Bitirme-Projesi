@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,9 @@ namespace NotAt
         Form3 frm3;
         private void button1_Click(object sender, EventArgs e)
         {
+
+            
+
             string kullanici_ad = textBox1.Text;
             string sifre = textBox2.Text;
 
@@ -111,6 +115,16 @@ namespace NotAt
 
 
             
+        }
+
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
     }
 }

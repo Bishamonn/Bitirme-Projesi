@@ -25,6 +25,14 @@ namespace NotAt
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            FormNotification notification = new FormNotification();
+            notification.Show(); // Bildirim formunu göster
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
             label1.Visible = true;
             string kullaniciad = GlobalVariables.KullaniciAd;
             string sifre = GlobalVariables.Sifre;

@@ -19,19 +19,36 @@ namespace NotAt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
             label1.Top = (this.ClientSize.Width - button1.Height) / 7;
+
+            label1.Location = new Point(
+        (this.ClientSize.Width - label1.Width) / 2, // Yatay ortalama
+        label1.Location.Y // Mevcut dikey konumu korur
+        );
             button1.Left = (this.ClientSize.Width - button1.Width) / 2;
             button2.Left = (this.ClientSize.Width - button1.Width) / 2;
 
 
             // Maximize (Büyütme) düğmesini devre dışı bırak
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
 
 
             this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
+
+
+
+          
+
+           
+
+
+
         }
+
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();

@@ -26,6 +26,27 @@ namespace NotAt
 
         private void Form4_Load(object sender, EventArgs e)
         {
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
+
+            button1.Left = (this.ClientSize.Width - button1.Width) / 2;
+
+            textBox1.Left = (this.ClientSize.Width - button1.Width) / 2;
+            textBox2.Left = (this.ClientSize.Width - button1.Width) / 2;
+            textBox3.Left = (this.ClientSize.Width - button1.Width) / 2;
+            textBox4.Left = (this.ClientSize.Width - button1.Width) / 2;
+
+            label1.Left = (this.ClientSize.Width - button1.Width) / 2;
+            label2.Left = (this.ClientSize.Width - button1.Width) / 2;
+            label3.Left = (this.ClientSize.Width - button1.Width) / 2;
+            label4.Left = (this.ClientSize.Width - button1.Width) / 2;
+
+
+
             MySqlConnection baglan = new MySqlConnection(
                 "server=localhost;" +
                 "database=proje;" +
@@ -37,6 +58,9 @@ namespace NotAt
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            
+
             try
             {
 
@@ -81,8 +105,16 @@ namespace NotAt
             }
             catch (MySqlException ex)
             {
-               
-                if (ex.Number == 1062)
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                string.IsNullOrWhiteSpace(textBox2.Text) ||
+                string.IsNullOrWhiteSpace(textBox3.Text) ||
+                string.IsNullOrWhiteSpace(textBox4.Text))
+                {
+                    MessageBox.Show("Hata: Lütfen tüm alanları doldurunuz.");
+                }
+
+
+                else if (ex.Number == 1062)
                 {
                     MessageBox.Show("Hata: Kayıt işlemi başarısız. Bu kullanıcı adı zaten alınmış.");
                     textBox1.Text = "";

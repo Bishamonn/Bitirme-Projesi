@@ -30,7 +30,13 @@ namespace NotAt
             );
         private void Form5_Load(object sender, EventArgs e)
         {
-            
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
+
             try
             {
                 baglan.Open();
