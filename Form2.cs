@@ -79,6 +79,7 @@ namespace NotAt
 
                     GlobalVariables.KullaniciAd = textBox1.Text;
                     GlobalVariables.Sifre = textBox2.Text;
+                    
 
                     Form3 frm3 = new Form3();
                     frm3.Show();
