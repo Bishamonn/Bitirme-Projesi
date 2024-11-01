@@ -86,9 +86,9 @@ namespace NotAt
                 {
                     label1.Text = "Hoşgeldiniz. Rütbeniz: " + result;
                 }
-                else
+                else if(result != null && result.ToString() == "Kullanıcı")
                 {
-
+                    label1.Text = "Hoşgeldiniz. Rütbeniz: " + result;
                 }
             }
             catch (Exception ex)

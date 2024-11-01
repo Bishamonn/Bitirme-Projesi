@@ -148,6 +148,12 @@
     <Compile Include="NotForm.Designer.cs">
       <DependentUpon>NotForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotGörüntüle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotGörüntüle.Designer.cs">
+      <DependentUpon>NotGörüntüle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotForm.resx">
       <DependentUpon>NotForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotGörüntüle.resx">
+      <DependentUpon>NotGörüntüle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -101,5 +101,12 @@ namespace NotAt
             notForm.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NotGörüntüle goruntu = new NotGörüntüle();
+            goruntu.Show();
+
+        }
     }
 }

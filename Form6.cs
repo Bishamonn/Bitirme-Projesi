@@ -22,7 +22,8 @@ namespace NotAt
 
         private void Form6_Load(object sender, EventArgs e)
         {
-
+            FormNotification notification = new FormNotification();
+            notification.Show();
 
             this.MinimumSize = new Size(0, 0); // Kısıtlamayı kaldır
             this.Size = new Size(100, 150);    // Formun boyutunu ayarla

@@ -95,6 +95,7 @@
             this.button5.Text = "Not Görüntüle";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form3
             // 

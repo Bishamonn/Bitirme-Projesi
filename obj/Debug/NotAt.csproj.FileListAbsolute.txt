@@ -60,3 +60,4 @@ C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Deb
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.Form6.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.FormNotification.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotForm.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotGörüntüle.resources

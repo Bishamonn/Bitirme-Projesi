@@ -1,6 +1,6 @@
 ﻿namespace NotAt
 {
-    partial class NotForm
+    partial class NotGörüntüle
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // flowLayoutPanel1
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(242, 206);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(848, 426);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // NotForm
+            // NotGörüntüle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 234);
-            this.Controls.Add(this.richTextBox1);
-            this.Name = "NotForm";
-            this.Text = "NotForm";
-            this.Load += new System.EventHandler(this.NotForm_Load);
+            this.ClientSize = new System.Drawing.Size(872, 450);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Name = "NotGörüntüle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "NotGörüntüle";
+            this.Load += new System.EventHandler(this.NotGörüntüle_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
