@@ -108,5 +108,19 @@ namespace NotAt
             goruntu.Show();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NotSil sil = new NotSil();
+            sil.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NotUpdate update = new NotUpdate();
+            update.Show();
+            this.Hide();
+        }
     }
 }

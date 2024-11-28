@@ -1,6 +1,6 @@
 ﻿namespace NotAt
 {
-    partial class NotGörüntüle
+    partial class NotSil
     {
         /// <summary>
         /// Required designer variable.
@@ -37,18 +37,17 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(848, 426);
             this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // NotGörüntüle
+            // NotSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 450);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "NotGörüntüle";
+            this.Name = "NotSil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NotGörüntüle";
-            this.Load += new System.EventHandler(this.NotGörüntüle_Load);
+            this.Text = "NotSil";
+            this.Load += new System.EventHandler(this.NotSil_Load);
             this.ResumeLayout(false);
 
         }

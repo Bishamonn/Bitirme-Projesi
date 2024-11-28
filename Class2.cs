@@ -17,6 +17,18 @@ namespace NotAt
 
             public static string Mesaj { get; set; }
             public static string MesajKullanici { get; set; }
+
+
+            public class ComboBoxItem
+            {
+                public string Text { get; set; }
+                public string Value { get; set; }
+
+                public override string ToString()
+                {
+                    return Text; // ComboBox'ta sadece kullanıcı adı görünür
+                }
+            }
         }
     }
 }

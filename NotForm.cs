@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static NotAt.Class2;
+using static NotAt.Class2.GlobalVariables;
 
 namespace NotAt
 {
@@ -24,47 +25,101 @@ namespace NotAt
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+
+            KullaniciListesiGetir();
         }
-        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+
+
+        private void KullaniciListesiGetir()
         {
-            string kisi_id = GlobalVariables.kisi_id;
+            string connectionString = "server=localhost;" +
+                                      "database=proje;" +
+                                      "user=root;" +
+                                      "password=123456";
 
-            if (e.KeyCode == Keys.Enter)
+            using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
-                string mesaj = richTextBox1.Text;
-
-                using (MySqlConnection baglan = new MySqlConnection(
-                    "server=localhost;" +
-                    "database=proje;" +
-                    "user=root;" +
-                    "password=123456"))
+                try
                 {
-                    try
+                    baglan.Open();
+                    string sql = "SELECT id, kullanici_ad FROM kullanicilar";
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
+
+                    MySqlDataReader reader = komut.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        baglan.Open();
-                        string sql = "INSERT INTO mesaj (kisi_id, mesaj) VALUES (@kisi_id, @mesaj)";
-                        MySqlCommand komut = new MySqlCommand(sql, baglan);
-
-                        // Parametreleri ekle
-                        komut.Parameters.AddWithValue("@kisi_id",kisi_id);
-                        komut.Parameters.AddWithValue("@mesaj", mesaj);
-
-                        komut.ExecuteNonQuery();
-
-                        MessageBox.Show("Mesaj başarıyla kaydedildi!");
-
-                        richTextBox1.Clear(); // Mesaj kaydedildikten sonra RichTextBox'ı temizle
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hata: " + ex.Message);
+                        // ComboBox'a kullanıcı adını ekle
+                        comboBox1.Items.Add(new ComboBoxItem
+                        {
+                            Text = reader["kullanici_ad"].ToString(),
+                            Value = reader["id"].ToString()
+                        });
                     }
                 }
-
-                e.Handled = true; // Enter tuşunun yeni satır açmaması için
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
             }
         }
 
-     
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (comboBox1.SelectedItem is ComboBoxItem selectedItem)
+                {
+                    string selectedKullaniciAd = selectedItem.Text; // Seçilen kullanıcı adı
+                    string selectedKullaniciId = selectedItem.Value; // Seçilen kullanıcı ID
+                    string mesaj = richTextBox1.Text;
+
+                    using (MySqlConnection baglan = new MySqlConnection(
+                        "server=localhost;" +
+                        "database=proje;" +
+                        "user=root;" +
+                        "password=123456"))
+                    {
+                        try
+                        {
+                            baglan.Open();
+                            string sql = "INSERT INTO mesaj (kisi_id, mesaj, alici_kullanici_ad) VALUES (@kisi_id, @mesaj, @alici_kullanici_ad)";
+                            MySqlCommand komut = new MySqlCommand(sql, baglan);
+
+                            komut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
+                            komut.Parameters.AddWithValue("@mesaj", mesaj);
+                            komut.Parameters.AddWithValue("@alici_kullanici_ad", selectedKullaniciAd);
+
+                            komut.ExecuteNonQuery();
+
+                            MessageBox.Show("Mesaj başarıyla gönderildi!");
+                            richTextBox1.Clear();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Hata: " + ex.Message);
+                        }
+                    }
+
+                    e.Handled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen bir alıcı seçin!");
+                }
+            }
+        }
+
+        private void NotForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

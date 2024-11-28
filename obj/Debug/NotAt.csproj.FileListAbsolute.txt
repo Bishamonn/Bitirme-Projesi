@@ -61,3 +61,7 @@ C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Deb
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.FormNotification.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotForm.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotGörüntüle.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.MessageDetailsForm.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotSil.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.UpdateForm.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotUpdate.resources

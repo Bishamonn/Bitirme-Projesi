@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -46,56 +46,58 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button5
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Image = global::NotAt.Properties.Resources.not_yaz;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(701, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 106);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Not yaz";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Image = global::NotAt.Properties.Resources.güncelle;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(701, 235);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 106);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Not Güncelle";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button5.Image = global::NotAt.Properties.Resources.görüntüle;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.Location = new System.Drawing.Point(698, 347);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(90, 104);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "\r\nNotları Görüntüle";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Image = global::NotAt.Properties.Resources.sil;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(701, 124);
+            this.button4.Location = new System.Drawing.Point(698, 124);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 105);
+            this.button4.Size = new System.Drawing.Size(90, 105);
             this.button4.TabIndex = 4;
             this.button4.Text = "Not Sil";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // button3
             // 
-            this.button5.Image = global::NotAt.Properties.Resources.görüntüle;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(701, 347);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 104);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Not Görüntüle";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button3.Image = global::NotAt.Properties.Resources.güncelle;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(698, 235);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 106);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Güncelle";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Image = global::NotAt.Properties.Resources.not_yaz;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(698, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 106);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Not yaz";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form3
             // 

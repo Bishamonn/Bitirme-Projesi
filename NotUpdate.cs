@@ -12,32 +12,20 @@ using static NotAt.Class2;
 
 namespace NotAt
 {
-    public partial class NotGörüntüle : Form
+    public partial class NotUpdate : Form
     {
-        public NotGörüntüle()
+        private int selectedMessageId = -1; // Seçilen mesajın ID'sini tutar
+        public NotUpdate()
         {
             InitializeComponent();
         }
 
-        private void OpenMessageDetailsForm(string mesaj)
-        {
-            // Mesaj detaylarını göstermek için yeni form oluştur
-            MessageDetailsForm detailsForm = new MessageDetailsForm();
-
-            // Formun mesaj gösteren metodunu çağır
-            detailsForm.SetMessage(mesaj);
-
-            // Formu göster
-            detailsForm.Show();
-        }
-
-        private void NotGörüntüle_Load(object sender, EventArgs e)
+        private void NotUpdate_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
 
             flowLayoutPanel1.AutoScroll = true; // Dikey kaydırma çubuğunu etkinleştirir
-
 
             MySqlConnection baglan = new MySqlConnection(
                 "server=localhost;" +
@@ -55,17 +43,17 @@ namespace NotAt
                 unvanKomut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
                 string unvan = (string)unvanKomut.ExecuteScalar();
 
-                
+                // Admin için tüm mesajlar, kullanıcı için sadece kendisine ait olanlar
                 if (unvan == "Admin")
                 {
-                     sql = "SELECT mesaj, kullanici_ad FROM mesaj " +
-                                "JOIN kullanicilar ON mesaj.kisi_id = kullanicilar.id ";
+                    sql = "SELECT mesaj.id AS mesajId, mesaj.mesaj, kullanici_ad FROM mesaj " +
+                          "JOIN kullanicilar ON mesaj.kisi_id = kullanicilar.id";
                 }
                 else
                 {
-                     sql = "SELECT mesaj, kullanici_ad FROM mesaj " +
-                                 "JOIN kullanicilar ON mesaj.kisi_id = kullanicilar.id " +
-                                 "WHERE kullanicilar.id = @kisi_id";
+                    sql = "SELECT mesaj.id AS mesajId, mesaj.mesaj, kullanici_ad FROM mesaj " +
+                          "JOIN kullanicilar ON mesaj.kisi_id = kullanicilar.id " +
+                          "WHERE kullanicilar.id = @kisi_id";
                 }
                 MySqlCommand komut = new MySqlCommand(sql, baglan);
                 komut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
@@ -73,6 +61,7 @@ namespace NotAt
 
                 while (reader.Read())
                 {
+                    int mesajId = reader.GetInt32("mesajId"); // Mesaj ID'sini alıyoruz
                     string mesaj = reader.GetString("mesaj");
                     string kullaniciAd = reader.GetString("kullanici_ad");
 
@@ -103,19 +92,18 @@ namespace NotAt
                         Height = 20
                     };
 
+                    // Panelin çift tıklama olayını tanımlıyoruz
                     notPanel.DoubleClick += (s, args) =>
                     {
-                        OpenMessageDetailsForm(mesaj);
+                        LoadSelectedMessage(mesajId, mesaj);
                     };
-
-                    notLabel.DoubleClick += (s, args) =>
-                    {
-                        OpenMessageDetailsForm(mesaj);
-                    };
-
                     kullaniciAdLabel.DoubleClick += (s, args) =>
                     {
-                        OpenMessageDetailsForm(mesaj);
+                        LoadSelectedMessage(mesajId, mesaj);
+                    };
+                    notLabel.DoubleClick += (s, args) =>
+                    {
+                        LoadSelectedMessage(mesajId, mesaj);
                     };
 
                     notPanel.Controls.Add(kullaniciAdLabel);
@@ -134,7 +122,51 @@ namespace NotAt
             }
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void LoadSelectedMessage(int mesajId, string mesaj)
+        {
+            selectedMessageId = mesajId; // Seçilen mesajın ID'sini kaydediyoruz
+            richTextBox1.Text = mesaj; // Mesaj içeriğini RichTextBox'a yüklüyoruz
+            richTextBox1.ReadOnly = false; // Mesaj düzenlenebilir
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && selectedMessageId != -1) // Enter tuşu ve geçerli mesaj ID
+            {
+                e.SuppressKeyPress = true; // Enter tuşunun varsayılan davranışını tamamen engelle
+                UpdateMessage();
+            }
+        }
+        private void UpdateMessage()
+        {
+            string updatedMessage = richTextBox1.Text;
+
+            using (MySqlConnection baglan = new MySqlConnection(
+                "server=localhost;" +
+                "database=proje;" +
+                "user=root;" +
+                "password=123456"))
+            {
+                try
+                {
+                    baglan.Open();
+                    string sql = "UPDATE mesaj SET mesaj = @mesaj WHERE id = @id";
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
+                    komut.Parameters.AddWithValue("@mesaj", updatedMessage);
+                    komut.Parameters.AddWithValue("@id", selectedMessageId);
+                    komut.ExecuteNonQuery();
+
+                    MessageBox.Show("Mesaj başarıyla güncellendi!");
+                    this.Close(); // Formu kapatıyoruz
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Güncelleme hatası: " + ex.Message);
+                }
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

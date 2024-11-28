@@ -142,6 +142,12 @@
     <Compile Include="FormNotification.Designer.cs">
       <DependentUpon>FormNotification.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDetailsForm.Designer.cs">
+      <DependentUpon>MessageDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,8 +160,26 @@
     <Compile Include="NotGörüntüle.Designer.cs">
       <DependentUpon>NotGörüntüle.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotSil.Designer.cs">
+      <DependentUpon>NotSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotUpdate.Designer.cs">
+      <DependentUpon>NotUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,11 +201,20 @@
     <EmbeddedResource Include="FormNotification.resx">
       <DependentUpon>FormNotification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageDetailsForm.resx">
+      <DependentUpon>MessageDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NotForm.resx">
       <DependentUpon>NotForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotGörüntüle.resx">
       <DependentUpon>NotGörüntüle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotSil.resx">
+      <DependentUpon>NotSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotUpdate.resx">
+      <DependentUpon>NotUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,6 +226,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

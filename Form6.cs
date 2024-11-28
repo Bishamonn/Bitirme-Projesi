@@ -26,7 +26,7 @@ namespace NotAt
             notification.Show();
 
             this.MinimumSize = new Size(0, 0); // Kısıtlamayı kaldır
-            this.Size = new Size(100, 150);    // Formun boyutunu ayarla
+            this.Size = new Size(100, 300);    // Formun boyutunu ayarla
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -35,7 +35,10 @@ namespace NotAt
             this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
 
             button1.Left = (this.ClientSize.Width - button1.Width) / 2;
-            button1.Top = (this.ClientSize.Height - button1.Height) / 2;
+            //button1.Top = (this.ClientSize.Height - button1.Height) / 2;
+
+            button3.Left = (this.ClientSize.Width - button3.Width) / 2;
+            //button3.Top = (this.ClientSize.Height - button3.Height) / 2;
 
             this.Width = 100;
 
@@ -79,6 +82,12 @@ namespace NotAt
         {
             NotForm notForm = new NotForm();
             notForm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NotGörüntüle goruntu = new NotGörüntüle();
+            goruntu.Show();
         }
     }
 }
