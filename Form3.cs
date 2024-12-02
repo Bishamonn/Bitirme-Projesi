@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using static NotAt.Class2;
+using System.Net.Sockets;
+using System.Net;
 
 namespace NotAt
 {

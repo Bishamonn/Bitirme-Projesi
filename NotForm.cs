@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,7 @@ namespace NotAt
         {
             InitializeComponent();
         }
-        
+
         private void NotForm_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -27,6 +28,12 @@ namespace NotAt
             this.MinimizeBox = false;
 
             KullaniciListesiGetir();
+
+            string serverIP = "127.0.0.1"; // Sunucu bilgisayarının IP adresini yazın
+            int port = 5000;
+
+            TcpClient client = new TcpClient(serverIP, port);
+            NetworkStream stream = client.GetStream();
         }
 
 
@@ -63,6 +70,7 @@ namespace NotAt
                 }
             }
         }
+
 
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -111,6 +119,32 @@ namespace NotAt
             }
         }
 
+        private string GetUserIpAddress(string userId)
+        {
+            string ipAddress = null;
+            using (MySqlConnection baglan = new MySqlConnection(
+                "server=localhost;" +
+                "database=proje;" +
+                "user=root;" +
+                "password=123456"))
+            {
+                try
+                {
+                    baglan.Open();
+                    string sql = "SELECT ip_adresi FROM kullanicilar WHERE id = @id";
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
+                    komut.Parameters.AddWithValue("@id", userId);
+
+                    ipAddress = komut.ExecuteScalar()?.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("IP adresi alma hatası: " + ex.Message);
+                }
+            }
+            return ipAddress;
+        }
+    
         private void NotForm_FormClosed(object sender, FormClosedEventArgs e)
         {
 

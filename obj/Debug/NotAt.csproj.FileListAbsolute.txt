@@ -65,3 +65,4 @@ C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Deb
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotSil.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.UpdateForm.resources
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.NotUpdate.resources
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.ServerForm.resources
