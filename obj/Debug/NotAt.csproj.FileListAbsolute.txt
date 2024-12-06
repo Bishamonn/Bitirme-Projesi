@@ -92,3 +92,7 @@ C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Deb
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Debug\Microsoft.Extensions.Options.ConfigurationExtensions.xml
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Debug\System.ValueTuple.xml
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Debug\NotAt.exe.manifest
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\bin\Debug\NotAt.application
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.exe.manifest
+C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\NotAt\Bitirme-Projesi\obj\Debug\NotAt.application

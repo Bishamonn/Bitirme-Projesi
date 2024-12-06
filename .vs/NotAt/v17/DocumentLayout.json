@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|c:\\users\\fidan\\onedrive\\masa\u00FCst\u00FC\\bitirme projesi\\notat\\bitirme-projesi\\notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|c:\\users\\fidan\\onedrive\\masa\u00FCst\u00FC\\bitirme projesi\\notat\\bitirme-projesi\\notg\u00F6r\u00FCnt\u00FCle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notg\u00F6r\u00FCnt\u00FCle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notg\u00F6r\u00FCnt\u00FCle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -118,8 +118,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 14,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -130,8 +134,7 @@
               "RelativeToolTip": "UpdateForm.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T18:54:22.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T18:54:22.56Z"
             },
             {
               "$type": "Document",
@@ -143,8 +146,7 @@
               "RelativeToolTip": "NotUpdate.cs",
               "ViewState": "AgIAAGwAAAAAAAAAAAAAAIgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T11:32:24.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T11:32:24.473Z"
             },
             {
               "$type": "Document",
@@ -155,8 +157,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotUpdate.cs [Tasar\u0131m]",
               "RelativeToolTip": "NotUpdate.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T11:17:40.984Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-11-28T11:17:40.984Z"
             },
             {
               "$type": "Document",
@@ -192,8 +193,7 @@
               "RelativeToolTip": "Form3.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAkwGgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T18:45:52.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T18:45:52.593Z"
             },
             {
               "$type": "Document",
@@ -204,8 +204,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\UpdateForm.cs [Tasar\u0131m]",
               "RelativeToolTip": "UpdateForm.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:44:55.77Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-11-21T16:44:55.77Z"
             },
             {
               "$type": "Document",
@@ -217,8 +216,7 @@
               "RelativeToolTip": "NotSil.cs",
               "ViewState": "AgIAAGcAAAAAAAAAAAAkwJAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:38:56.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:38:56.273Z"
             },
             {
               "$type": "Document",
@@ -229,8 +227,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotSil.cs [Tasar\u0131m]",
               "RelativeToolTip": "NotSil.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:36:56.804Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-11-21T15:36:56.804Z"
             },
             {
               "$type": "Document",
@@ -265,8 +262,7 @@
               "RelativeToolTip": "NotG\u00F6r\u00FCnt\u00FCle.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAkwFIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T10:04:39.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T10:04:39.8Z"
             },
             {
               "$type": "Document",
@@ -277,8 +273,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotG\u00F6r\u00FCnt\u00FCle.cs [Tasar\u0131m]",
               "RelativeToolTip": "NotG\u00F6r\u00FCnt\u00FCle.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T10:04:31.668Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-31T10:04:31.668Z"
             },
             {
               "$type": "Document",
@@ -302,8 +297,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotForm.cs [Tasar\u0131m]",
               "RelativeToolTip": "NotForm.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T19:55:01.706Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-26T19:55:01.706Z"
             },
             {
               "$type": "Document",
@@ -350,8 +344,7 @@
               "RelativeToolTip": "Form4.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAkwIYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:18:38.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T16:18:38.618Z"
             },
             {
               "$type": "Document",
@@ -375,8 +368,7 @@
               "RelativeToolTip": "Form6.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAkwE0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:17:05.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T11:17:05.707Z"
             },
             {
               "$type": "Document",
@@ -409,8 +401,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form3.cs [Tasar\u0131m]",
               "RelativeToolTip": "Form3.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T18:41:42.435Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-08T18:41:42.435Z"
             },
             {
               "$type": "Document",
@@ -421,8 +412,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form4.cs [Tasar\u0131m]",
               "RelativeToolTip": "Form4.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:12:17.26Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-15T16:12:17.26Z"
             },
             {
               "$type": "Document",
@@ -444,8 +434,7 @@
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form6.cs [Tasar\u0131m]",
               "RelativeToolTip": "Form6.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T06:47:16.25Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-22T06:47:16.25Z"
             }
           ]
         }
