@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,18 +20,15 @@ namespace NotAt
             InitializeComponent();
         }
 
-            string kullaniciad = GlobalVariables.KullaniciAd;
-            string sifre = GlobalVariables.Sifre;
+        string kullaniciad = GlobalVariables.KullaniciAd;
+        string sifre = GlobalVariables.Sifre;
 
-            MySqlConnection baglan = new MySqlConnection(
-                "server=localhost;" +
-                "database=proje;" +
-                "user=root;" +
-                "password=123456"
-            );
+        // SQLite veritabanı bağlantısı
+        SQLiteConnection baglan = new SQLiteConnection(
+            "Data Source=mydatabase.sqlite;Version=3;");
+
         private void Form5_Load(object sender, EventArgs e)
         {
-
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -39,25 +37,25 @@ namespace NotAt
 
             try
             {
+                // SQLite bağlantısını aç
                 baglan.Open();
-                string sql = "SELECT kullanici_ad FROM kullanicilar WHERE " +
-                    "unvan IS NULL ";
 
-                MySqlCommand komut = new MySqlCommand(sql, baglan);
+                // SQL sorgusu
+                string sql = "SELECT kullanici_ad FROM kullanicilar WHERE unvan IS NULL";
 
+                // SQLiteCommand oluştur
+                SQLiteCommand komut = new SQLiteCommand(sql, baglan);
 
-
-                MySqlDataReader reader = komut.ExecuteReader();
-
-              
+                // Sorguyu çalıştır ve sonuçları oku
+                SQLiteDataReader reader = komut.ExecuteReader();
 
                 while (reader.Read())
                 {
                     string kullaniciAd = reader["kullanici_ad"].ToString();
-                    comboBox1.Items.Add(kullaniciAd);  
+                    comboBox1.Items.Add(kullaniciAd);
                 }
 
-                reader.Close(); // Reader'ı kapatalım
+                reader.Close(); // Reader'ı kapat
             }
             catch (Exception ex)
             {
@@ -65,7 +63,8 @@ namespace NotAt
             }
             finally
             {
-                baglan.Close(); 
+                // Bağlantıyı kapat
+                baglan.Close();
             }
 
         }
@@ -73,12 +72,14 @@ namespace NotAt
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
-            {   string k_ad = comboBox1.SelectedItem.ToString();
+            {
+                string k_ad = comboBox1.SelectedItem.ToString();
                 string secilenDeger = comboBox2.SelectedItem.ToString();
+
                 baglan.Open();
                 string sql = "UPDATE kullanicilar SET unvan = @unvan WHERE kullanici_ad = @kullaniciad";
 
-                MySqlCommand komut = new MySqlCommand(sql, baglan);
+                SQLiteCommand komut = new SQLiteCommand(sql, baglan);
 
                 komut.Parameters.AddWithValue("@unvan", secilenDeger);
                 komut.Parameters.AddWithValue("@kullaniciad", k_ad);
@@ -89,7 +90,6 @@ namespace NotAt
                 {
                     MessageBox.Show("Unvan başarıyla güncellendi.");
                     this.Close();
-
                 }
                 else
                 {
@@ -99,6 +99,11 @@ namespace NotAt
             catch (Exception ex)
             {
                 MessageBox.Show("Hata: " + ex.Message);
+            }
+            finally
+            {
+                // Bağlantıyı kapatalım
+                baglan.Close();
             }
 
         }

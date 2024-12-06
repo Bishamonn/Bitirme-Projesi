@@ -6,11 +6,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using static NotAt.Class2;
 using static NotAt.Class2.GlobalVariables;
+using System.Data.SQLite;
 
 namespace NotAt
 {
@@ -27,41 +30,90 @@ namespace NotAt
             this.MaximizeBox = false;
             this.MinimizeBox = false;
 
+            // Kullanıcı listesi getirme fonksiyonu
             KullaniciListesiGetir();
 
-            string serverIP = "127.0.0.1"; // Sunucu bilgisayarının IP adresini yazın
+            // Sunucunun IP adresini almak için fonksiyonu çağırıyoruz
+            string serverIP = GetLocalIPAddress(); // Sunucu bilgisayarının IP adresini dinamik olarak alıyoruz
             int port = 5000;
 
-            TcpClient client = new TcpClient(serverIP, port);
-            NetworkStream stream = client.GetStream();
+            // TCP bağlantısı başlatma
+            try
+            {
+                TcpClient client = new TcpClient(serverIP, port);
+                NetworkStream stream = client.GetStream();
+
+                // Burada ağ üzerinden işlem yapılabilir
+                // Örnek: stream.Write() ya da stream.Read()
+            }
+            catch (SocketException ex)
+            {
+                MessageBox.Show($"Bağlantı hatası: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Sunucunun IP adresini almak için statik fonksiyon
+        public static string GetLocalIPAddress()
+        {
+            string localIP = "127.0.0.1"; // Varsayılan olarak localhost
+            try
+            {
+                foreach (var networkInterface in NetworkInterface.GetAllNetworkInterfaces())
+                {
+                    foreach (var address in networkInterface.GetIPProperties().UnicastAddresses)
+                    {
+                        // Geçerli bir IPv4 adresi varsa
+                        if (address.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                        {
+                            // Adresi döndür
+                            localIP = address.Address.ToString();
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"IP adresi alınırken bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return localIP;
         }
 
 
         private void KullaniciListesiGetir()
         {
-            string connectionString = "server=localhost;" +
-                                      "database=proje;" +
-                                      "user=root;" +
-                                      "password=123456";
+            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
 
-            using (MySqlConnection baglan = new MySqlConnection(connectionString))
+            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
             {
                 try
                 {
                     baglan.Open();
-                    string sql = "SELECT id, kullanici_ad FROM kullanicilar";
-                    MySqlCommand komut = new MySqlCommand(sql, baglan);
 
-                    MySqlDataReader reader = komut.ExecuteReader();
+                    // Kullanıcının adını sorgudan hariç tut
+                    string sql = "SELECT id, kullanici_ad FROM kullanicilar WHERE kullanici_ad != @girisYapanKullaniciAd";
 
-                    while (reader.Read())
+                    using (SQLiteCommand komut = new SQLiteCommand(sql, baglan))
                     {
-                        // ComboBox'a kullanıcı adını ekle
-                        comboBox1.Items.Add(new ComboBoxItem
+                        komut.Parameters.AddWithValue("@girisYapanKullaniciAd", GlobalVariables.KullaniciAd);
+
+                        using (SQLiteDataReader reader = komut.ExecuteReader())
                         {
-                            Text = reader["kullanici_ad"].ToString(),
-                            Value = reader["id"].ToString()
-                        });
+                            while (reader.Read())
+                            {
+                                // ComboBox'a kullanıcı adını ekle
+                                comboBox1.Items.Add(new ComboBoxItem
+                                {
+                                    Text = reader["kullanici_ad"].ToString(),
+                                    Value = reader["id"].ToString()
+                                });
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -83,17 +135,16 @@ namespace NotAt
                     string selectedKullaniciId = selectedItem.Value; // Seçilen kullanıcı ID
                     string mesaj = richTextBox1.Text;
 
-                    using (MySqlConnection baglan = new MySqlConnection(
-                        "server=localhost;" +
-                        "database=proje;" +
-                        "user=root;" +
-                        "password=123456"))
+                    // SQLite bağlantısı
+                    string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
+
+                    using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
                     {
                         try
                         {
                             baglan.Open();
                             string sql = "INSERT INTO mesaj (kisi_id, mesaj, alici_kullanici_ad) VALUES (@kisi_id, @mesaj, @alici_kullanici_ad)";
-                            MySqlCommand komut = new MySqlCommand(sql, baglan);
+                            SQLiteCommand komut = new SQLiteCommand(sql, baglan);
 
                             komut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
                             komut.Parameters.AddWithValue("@mesaj", mesaj);
@@ -122,17 +173,14 @@ namespace NotAt
         private string GetUserIpAddress(string userId)
         {
             string ipAddress = null;
-            using (MySqlConnection baglan = new MySqlConnection(
-                "server=localhost;" +
-                "database=proje;" +
-                "user=root;" +
-                "password=123456"))
+
+            using (SQLiteConnection baglan = new SQLiteConnection("Data Source=mydatabase.sqlite;Version=3;"))
             {
                 try
                 {
                     baglan.Open();
                     string sql = "SELECT ip_adresi FROM kullanicilar WHERE id = @id";
-                    MySqlCommand komut = new MySqlCommand(sql, baglan);
+                    SQLiteCommand komut = new SQLiteCommand(sql, baglan);
                     komut.Parameters.AddWithValue("@id", userId);
 
                     ipAddress = komut.ExecuteScalar()?.ToString();
@@ -142,6 +190,7 @@ namespace NotAt
                     MessageBox.Show("IP adresi alma hatası: " + ex.Message);
                 }
             }
+
             return ipAddress;
         }
     

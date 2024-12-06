@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
@@ -37,10 +38,7 @@ namespace NotAt
             this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
 
             button1.Left = (this.ClientSize.Width - button1.Width) / 2;
-            //button1.Top = (this.ClientSize.Height - button1.Height) / 2;
-
             button3.Left = (this.ClientSize.Width - button3.Width) / 2;
-            //button3.Top = (this.ClientSize.Height - button3.Height) / 2;
 
             this.Width = 100;
 
@@ -48,35 +46,36 @@ namespace NotAt
             string sifre = GlobalVariables.Sifre;
             string kisi_id = GlobalVariables.kisi_id;
 
-            MySqlConnection baglan = new MySqlConnection(
-                "server=localhost;" +
-                "database=proje;" +
-                "user=root;" +
-                "password=123456"
-            );
-            try
+            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
+            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
             {
-                baglan.Open();
-                string sql = "SELECT id FROM kullanicilar WHERE " +
-                "kullanici_ad = @kullaniciad AND sifre = @Sifre";
+                try
+                {
+                    baglan.Open();
 
-                MySqlCommand komut = new MySqlCommand(sql, baglan);
+                    string sql = "SELECT id FROM kullanicilar WHERE kullanici_ad = @kullaniciad AND sifre = @sifre";
 
+                    using (SQLiteCommand komut = new SQLiteCommand(sql, baglan))
+                    {
+                        komut.Parameters.AddWithValue("@kullaniciad", kullaniciad);
+                        komut.Parameters.AddWithValue("@sifre", sifre);
 
-                komut.Parameters.AddWithValue("@kullaniciad", kullaniciad);
-                komut.Parameters.AddWithValue("@Sifre", sifre);
-                komut.Parameters.AddWithValue("@kisi_id", kisi_id);
+                        object result = komut.ExecuteScalar();
 
-                komut.ExecuteNonQuery();
-
-                GlobalVariables.kisi_id = komut.ExecuteScalar().ToString();
-
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata: " + ex.Message);
+                        if (result != null)
+                        {
+                            GlobalVariables.kisi_id = result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
             }
         }
 

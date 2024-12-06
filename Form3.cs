@@ -101,7 +101,7 @@ namespace NotAt
         {
             NotForm notForm = new NotForm();
             notForm.Show();
-            this.Hide();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -115,14 +115,14 @@ namespace NotAt
         {
             NotSil sil = new NotSil();
             sil.Show();
-            this.Hide();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             NotUpdate update = new NotUpdate();
             update.Show();
-            this.Hide();
+            
         }
     }
 }

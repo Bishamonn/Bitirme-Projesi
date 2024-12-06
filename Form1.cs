@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace NotAt
 {
@@ -19,7 +21,8 @@ namespace NotAt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
+
             label1.Top = (this.ClientSize.Width - button1.Height) / 7;
 
             label1.Location = new Point(
@@ -38,15 +41,11 @@ namespace NotAt
 
             this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
 
-
-
-          
-
-           
-
-
-
         }
+
+
+
+
 
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -64,3 +63,6 @@ namespace NotAt
         }
     }
 }
+        
+    
+

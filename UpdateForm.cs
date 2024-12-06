@@ -16,5 +16,10 @@ namespace NotAt
         {
             InitializeComponent();
         }
+
+        private void UpdateForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
