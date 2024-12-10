@@ -39,10 +39,10 @@ namespace NotAt
 
             flowLayoutPanel1.AutoScroll = true; // Dikey kaydırma çubuğunu etkinleştirir
 
-            // SQLite bağlantısı
-            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
+            // MySQL bağlantısı
+            string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;Port=25060;Database=proje;User ID=doadmin;Password=AVNS_i5KKCR44-CAV6oo7xLn;SslMode=Required;";
 
-            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
+            using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
                 try
                 {
@@ -50,7 +50,7 @@ namespace NotAt
 
                     // Kullanıcının unvanını al
                     string unvanSql = "SELECT unvan FROM kullanicilar WHERE id = @kisi_id";
-                    using (SQLiteCommand unvanKomut = new SQLiteCommand(unvanSql, baglan))
+                    using (MySqlCommand unvanKomut = new MySqlCommand(unvanSql, baglan))
                     {
                         unvanKomut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
                         object result = unvanKomut.ExecuteScalar();
@@ -70,14 +70,14 @@ namespace NotAt
                                   "WHERE mesaj.alici_kullanici_ad = @kullanici_ad";
                         }
 
-                        using (SQLiteCommand komut = new SQLiteCommand(sql, baglan))
+                        using (MySqlCommand komut = new MySqlCommand(sql, baglan))
                         {
                             if (unvan != "Admin")
                             {
                                 komut.Parameters.AddWithValue("@kullanici_ad", GlobalVariables.KullaniciAd);
                             }
 
-                            using (SQLiteDataReader reader = komut.ExecuteReader())
+                            using (MySqlDataReader reader = komut.ExecuteReader())
                             {
                                 while (reader.Read())
                                 {
@@ -143,8 +143,16 @@ namespace NotAt
                 {
                     MessageBox.Show("Mesajları yüklerken hata oluştu: " + ex.Message);
                 }
+                finally
+                {
+                    // Bağlantıyı manuel olarak kapatma
+                    if (baglan.State == ConnectionState.Open)
+                    {
+                        baglan.Close();
+                    }
+                }
             }
-        
+
         }
 
             private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

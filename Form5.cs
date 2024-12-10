@@ -19,13 +19,17 @@ namespace NotAt
         {
             InitializeComponent();
         }
-
         string kullaniciad = GlobalVariables.KullaniciAd;
         string sifre = GlobalVariables.Sifre;
 
-        // SQLite veritabanı bağlantısı
-        SQLiteConnection baglan = new SQLiteConnection(
-            "Data Source=mydatabase.sqlite;Version=3;");
+        // MySQL veritabanı bağlantısı
+        MySqlConnection baglan = new MySqlConnection(
+            "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+            "port=25060;" +
+            "database=proje;" +
+            "user=doadmin;" +
+            "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+            "sslmode=Required;");
 
         private void Form5_Load(object sender, EventArgs e)
         {
@@ -37,17 +41,17 @@ namespace NotAt
 
             try
             {
-                // SQLite bağlantısını aç
+                // MySQL bağlantısını aç
                 baglan.Open();
 
                 // SQL sorgusu
                 string sql = "SELECT kullanici_ad FROM kullanicilar WHERE unvan IS NULL";
 
-                // SQLiteCommand oluştur
-                SQLiteCommand komut = new SQLiteCommand(sql, baglan);
+                // MySqlCommand oluştur
+                MySqlCommand komut = new MySqlCommand(sql, baglan);
 
                 // Sorguyu çalıştır ve sonuçları oku
-                SQLiteDataReader reader = komut.ExecuteReader();
+                MySqlDataReader reader = komut.ExecuteReader();
 
                 while (reader.Read())
                 {
@@ -66,7 +70,6 @@ namespace NotAt
                 // Bağlantıyı kapat
                 baglan.Close();
             }
-
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -79,7 +82,7 @@ namespace NotAt
                 baglan.Open();
                 string sql = "UPDATE kullanicilar SET unvan = @unvan WHERE kullanici_ad = @kullaniciad";
 
-                SQLiteCommand komut = new SQLiteCommand(sql, baglan);
+                MySqlCommand komut = new MySqlCommand(sql, baglan);
 
                 komut.Parameters.AddWithValue("@unvan", secilenDeger);
                 komut.Parameters.AddWithValue("@kullaniciad", k_ad);
@@ -105,7 +108,6 @@ namespace NotAt
                 // Bağlantıyı kapatalım
                 baglan.Close();
             }
-
         }
     }
 }

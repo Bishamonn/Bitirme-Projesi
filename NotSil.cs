@@ -27,8 +27,15 @@ namespace NotAt
 
             flowLayoutPanel1.AutoScroll = true; // Dikey kaydırma çubuğunu etkinleştirir
 
-            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
-            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
+            string connectionString =
+                "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+                "port=25060;" +
+                "database=proje;" +
+                "user=doadmin;" +
+                "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+                "sslmode=Required;";
+
+            using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
                 try
                 {
@@ -39,8 +46,8 @@ namespace NotAt
                                  "FROM mesaj " +
                                  "JOIN kullanicilar ON mesaj.kisi_id = kullanicilar.id";
 
-                    SQLiteCommand komut = new SQLiteCommand(sql, baglan);
-                    SQLiteDataReader reader = komut.ExecuteReader();
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
+                    MySqlDataReader reader = komut.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -122,14 +129,21 @@ namespace NotAt
 
             if (result == DialogResult.Yes)
             {
-                string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
-                using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
+                string connectionString =
+                    "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+                    "port=25060;" +
+                    "database=proje;" +
+                    "user=doadmin;" +
+                    "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+                    "sslmode=Required;";
+
+                using (MySqlConnection baglan = new MySqlConnection(connectionString))
                 {
                     try
                     {
                         baglan.Open();
                         string sql = "DELETE FROM mesaj WHERE id = @id";
-                        SQLiteCommand komut = new SQLiteCommand(sql, baglan);
+                        MySqlCommand komut = new MySqlCommand(sql, baglan);
                         komut.Parameters.AddWithValue("@id", mesajId);
                         komut.ExecuteNonQuery();
 

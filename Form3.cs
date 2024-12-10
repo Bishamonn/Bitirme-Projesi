@@ -38,24 +38,27 @@ namespace NotAt
             string kullaniciad = GlobalVariables.KullaniciAd;
             string sifre = GlobalVariables.Sifre;
 
+            // MySQL bağlantı dizesi
+            string connectionString = "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+                                      "port=25060;" +
+                                      "database=proje;" +
+                                      "user=doadmin;" +
+                                      "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+                                      "sslmode=Required;";
 
-            MySqlConnection baglan = new MySqlConnection(
-                "server=localhost;" +
-                "database=proje;" +
-                "user=root;" +
-                "password=123456"
-            );
+            MySqlConnection baglan = new MySqlConnection(connectionString);
             try
             {
                 baglan.Open();
+
                 string sql = "SELECT unvan FROM kullanicilar WHERE " +
-                    "kullanici_ad = @kullaniciad AND sifre = @Sifre";
+                             "kullanici_ad = @kullaniciad AND sifre = @Sifre";
+
                 string sql2 = "SELECT id FROM kullanicilar WHERE " +
-                    "kullanici_ad = @kullaniciad AND sifre = @Sifre";
+                              "kullanici_ad = @kullaniciad AND sifre = @Sifre";
 
                 MySqlCommand komut = new MySqlCommand(sql, baglan);
                 MySqlCommand komut2 = new MySqlCommand(sql2, baglan);
-
 
                 komut.Parameters.AddWithValue("@kullaniciad", kullaniciad);
                 komut.Parameters.AddWithValue("@Sifre", sifre);
@@ -63,15 +66,13 @@ namespace NotAt
                 komut2.Parameters.AddWithValue("@kullaniciad", kullaniciad);
                 komut2.Parameters.AddWithValue("@Sifre", sifre);
 
-
                 // Sorgunun sonucunu alıyoruz
                 object result = komut.ExecuteScalar();
                 object result2 = komut2.ExecuteScalar();
 
-                //Eğer sonuç null değilse kontrol edelim
+                // Eğer sonuç null değilse kontrol edelim
                 if (result != null && result.ToString() == "Admin")
                 {
-                   
                     GlobalVariables.kisi_id = result2.ToString();
                 }
                 else

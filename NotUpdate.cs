@@ -28,16 +28,24 @@ namespace NotAt
 
             flowLayoutPanel1.AutoScroll = true; // Dikey kaydırma çubuğunu etkinleştirir
 
-            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
-            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
+            string connectionString =
+                "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+                "port=25060;" +
+                "database=proje;" +
+                "user=doadmin;" +
+                "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+                "sslmode=Required;";
+
+            using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
                 try
                 {
                     string sql;
                     baglan.Open();
 
+                    // Kullanıcının unvanını sorgulama
                     string unvanSql = "SELECT unvan FROM kullanicilar WHERE id = @kisi_id";
-                    SQLiteCommand unvanKomut = new SQLiteCommand(unvanSql, baglan);
+                    MySqlCommand unvanKomut = new MySqlCommand(unvanSql, baglan);
                     unvanKomut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
                     string unvan = unvanKomut.ExecuteScalar()?.ToString();
 
@@ -54,9 +62,9 @@ namespace NotAt
                               "WHERE kullanicilar.id = @kisi_id";
                     }
 
-                    SQLiteCommand komut = new SQLiteCommand(sql, baglan);
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
                     komut.Parameters.AddWithValue("@kisi_id", GlobalVariables.kisi_id);
-                    SQLiteDataReader reader = komut.ExecuteReader();
+                    MySqlDataReader reader = komut.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -110,12 +118,12 @@ namespace NotAt
             }
         }
 
-        private void LoadSelectedMessage(int mesajId, string mesaj)
-        {
+            private void LoadSelectedMessage(int mesajId, string mesaj)
+            {
             selectedMessageId = mesajId; // Seçilen mesajın ID'sini kaydediyoruz
             richTextBox1.Text = mesaj; // Mesaj içeriğini RichTextBox'a yüklüyoruz
             richTextBox1.ReadOnly = false; // Mesaj düzenlenebilir
-        }
+            }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -130,14 +138,21 @@ namespace NotAt
         {
             string updatedMessage = richTextBox1.Text;
 
-            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
-            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
+            string connectionString =
+                "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+                "port=25060;" +
+                "database=proje;" +
+                "user=doadmin;" +
+                "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+                "sslmode=Required;";
+
+            using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
                 try
                 {
                     baglan.Open();
                     string sql = "UPDATE mesaj SET mesaj = @mesaj WHERE id = @id";
-                    SQLiteCommand komut = new SQLiteCommand(sql, baglan);
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
                     komut.Parameters.AddWithValue("@mesaj", updatedMessage);
                     komut.Parameters.AddWithValue("@id", selectedMessageId);
                     komut.ExecuteNonQuery();

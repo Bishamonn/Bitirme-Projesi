@@ -172,6 +172,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Class2.cs" />
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +221,7 @@
     <Compile Include="MessageDetailsForm.Designer.cs">
       <DependentUpon>MessageDetailsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NetworkHelper.cs" />
     <Compile Include="NotForm.cs">
       <SubType>Form</SubType>
     </Compile>
