@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.SQLite;
+
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,20 +50,7 @@ namespace NotAt
             CenterControl(label3);
             CenterControl(label4);
 
-            // SQLite bağlantısı
-            string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
-            using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
-            {
-                try
-                {
-                    baglan.Open();
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Veritabanı bağlantısında hata: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,16 +64,16 @@ namespace NotAt
                 string kullanici_ad = textBox3.Text.Trim();
                 string sifre = textBox4.Text.Trim();
 
-                // Veritabanı bağlantısı
-                string connectionString = "Data Source=mydatabase.sqlite;Version=3;";
-                using (SQLiteConnection baglan = new SQLiteConnection(connectionString))
+                // MySQL veritabanı bağlantısı
+                string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;Port=25060;Database=proje;Uid=doadmin;Pwd=AVNS_i5KKCR44-CAV6oo7xLn;SslMode=Required;";
+                using (MySqlConnection baglan = new MySqlConnection(connectionString))
                 {
                     baglan.Open();
 
                     string sql = "INSERT INTO kullanicilar (ad, soyad, kullanici_ad, sifre) VALUES (@ad, @soyad, @kullanici_ad, @sifre)";
 
                     // SQL komutunu oluştur
-                    using (SQLiteCommand komut = new SQLiteCommand(sql, baglan))
+                    using (MySqlCommand komut = new MySqlCommand(sql, baglan))
                     {
                         // Parametreleri ekliyoruz
                         komut.Parameters.AddWithValue("@ad", ad);
@@ -110,16 +97,16 @@ namespace NotAt
                             Form1 frm1 = new Form1();
                             frm1.Show();
                         }
-                        catch (SQLiteException ex)
+                        catch (MySqlException ex)
                         {
-                            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
-                                string.IsNullOrWhiteSpace(textBox2.Text) ||
-                                string.IsNullOrWhiteSpace(textBox3.Text) ||
-                                string.IsNullOrWhiteSpace(textBox4.Text))
+                            if (string.IsNullOrWhiteSpace(ad) ||
+                                string.IsNullOrWhiteSpace(soyad) ||
+                                string.IsNullOrWhiteSpace(kullanici_ad) ||
+                                string.IsNullOrWhiteSpace(sifre))
                             {
                                 MessageBox.Show("Hata: Lütfen tüm alanları doldurunuz.");
                             }
-                            else if (ex.ResultCode == SQLiteErrorCode.Constraint && ex.Message.Contains("UNIQUE"))
+                            else if (ex.Number == 1062) // MySQL hata kodu: 1062 -> UNIQUE ihlali
                             {
                                 MessageBox.Show("Hata: Bu kullanıcı adı zaten alınmış.");
                                 textBox3.Clear();

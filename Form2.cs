@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
@@ -32,79 +31,76 @@ namespace NotAt
             string kullanici_ad = textBox1.Text;
             string sifre = textBox2.Text;
 
-            // SQLite veritabanı bağlantısı
-            SQLiteConnection baglan = new SQLiteConnection("Data Source=mydatabase.sqlite;Version=3;");
-
-            try
+            // MySQL veritabanı bağlantısı
+            string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;Port=25060;Database=proje;Uid=doadmin;Pwd=AVNS_i5KKCR44-CAV6oo7xLn;SslMode=Required;";
+            using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
-                // Bağlantıyı aç
-                baglan.Open();
-
-                // SQL sorgusu (Parametreli kullanım)
-                string sql = "SELECT COUNT(*) FROM kullanicilar WHERE " +
-                             "kullanici_ad = @kullanici_ad AND sifre = @sifre";
-
-                string sql2 = "SELECT unvan FROM kullanicilar WHERE " +
-                              "kullanici_ad = @kullanici_ad AND sifre = @sifre";
-
-                // Komut oluştur
-                SQLiteCommand komut = new SQLiteCommand(sql, baglan);
-                SQLiteCommand komut2 = new SQLiteCommand(sql2, baglan);
-
-                komut.Parameters.AddWithValue("@kullanici_ad", kullanici_ad);
-                komut.Parameters.AddWithValue("@sifre", sifre);
-
-                komut2.Parameters.AddWithValue("@kullanici_ad", kullanici_ad);
-                komut2.Parameters.AddWithValue("@sifre", sifre);
-
-                // Sorguyu çalıştır ve eşleşen kayıt sayısını al
-                int count = Convert.ToInt32(komut.ExecuteScalar());
-
-                object result = komut2.ExecuteScalar();
-
-                if (count > 0 && result != null && result.ToString() == "Admin")
+                try
                 {
-                    // Giriş başarılı
-                    MessageBox.Show("Giriş başarılı!");
+                    // Bağlantıyı aç
+                    baglan.Open();
 
-                    GlobalVariables.KullaniciAd = textBox1.Text;
-                    GlobalVariables.Sifre = textBox2.Text;
+                    // SQL sorguları (Parametreli kullanım)
+                    string sql = "SELECT COUNT(*) FROM kullanicilar WHERE kullanici_ad = @kullanici_ad AND sifre = @sifre";
+                    string sql2 = "SELECT unvan FROM kullanicilar WHERE kullanici_ad = @kullanici_ad AND sifre = @sifre";
 
-                    Form3 frm3 = new Form3();
-                    frm3.Show();
-                    this.Hide();
+                    // Komut oluştur
+                    MySqlCommand komut = new MySqlCommand(sql, baglan);
+                    MySqlCommand komut2 = new MySqlCommand(sql2, baglan);
+
+                    komut.Parameters.AddWithValue("@kullanici_ad", kullanici_ad);
+                    komut.Parameters.AddWithValue("@sifre", sifre);
+
+                    komut2.Parameters.AddWithValue("@kullanici_ad", kullanici_ad);
+                    komut2.Parameters.AddWithValue("@sifre", sifre);
+
+                    // Sorguyu çalıştır ve eşleşen kayıt sayısını al
+                    int count = Convert.ToInt32(komut.ExecuteScalar());
+                    object result = komut2.ExecuteScalar();
+
+                    if (count > 0 && result != null && result.ToString() == "Admin")
+                    {
+                        // Giriş başarılı
+                        MessageBox.Show("Giriş başarılı!");
+
+                        GlobalVariables.KullaniciAd = textBox1.Text;
+                        GlobalVariables.Sifre = textBox2.Text;
+
+                        Form3 frm3 = new Form3();
+                        frm3.Show();
+                        this.Hide();
+                    }
+                    else if (count > 0)
+                    {
+                        MessageBox.Show("Giriş başarılı!");
+
+                        GlobalVariables.KullaniciAd = textBox1.Text;
+                        GlobalVariables.Sifre = textBox2.Text;
+
+                        Form6 frm6 = new Form6();
+                        frm6.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        // Giriş başarısız
+                        MessageBox.Show("Hatalı kullanıcı adı veya şifre.");
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                    }
+
+                    // Bağlantıyı kapat
+                    baglan.Close();
                 }
-                else if (count > 0)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Giriş başarılı!");
-
-                    GlobalVariables.KullaniciAd = textBox1.Text;
-                    GlobalVariables.Sifre = textBox2.Text;
-
-                    Form6 frm6 = new Form6();
-                    frm6.Show();
-                    this.Hide();
+                    // Hata oluşursa mesajı göster
+                    MessageBox.Show("Hata: " + ex.Message);
                 }
-                else
-                {
-                    // Giriş başarısız
-                    MessageBox.Show("Hatalı kullanıcı adı veya şifre.");
-                    textBox1.Text = "";
-                    textBox2.Text = "";
-                }
-
-                // Bağlantıyı kapat
-                baglan.Close();
-            }
-            catch (Exception ex)
-            {
-                // Hata oluşursa mesajı göster
-                MessageBox.Show("Hata: " + ex.Message);
             }
         }
 
-
-        private void Form2_Load(object sender, EventArgs e)
+            private void Form2_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#D5E9EC");
 

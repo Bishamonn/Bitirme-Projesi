@@ -13,7 +13,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static NotAt.Class2;
 using static NotAt.Class2.GlobalVariables;
-using System.Data.SQLite;
 
 namespace NotAt
 {
