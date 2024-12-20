@@ -234,14 +234,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NotAt.exe" size="56800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NotAt.exe" size="59360">
       <assemblyIdentity name="NotAt" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>elciWLITKKo5PQpsx898KVPsHuj6KHFr9FL/IOs7kGM=</dsig:DigestValue>
+        <dsig:DigestValue>zIf74ig9qKyk2TZSoQncu6gWrx5M6zFhXm60fmQZpQI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

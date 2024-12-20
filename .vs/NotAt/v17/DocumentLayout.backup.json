@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|c:\\users\\fidan\\onedrive\\masa\u00FCst\u00FC\\bitirme projesi\\notat\\bitirme-projesi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\networkhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:networkhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\updateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:updateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +67,8 @@
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|c:\\users\\fidan\\onedrive\\masa\u00FCst\u00FC\\bitirme projesi\\notat\\bitirme-projesi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,40 +83,12 @@
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notg\u00F6r\u00FCnt\u00FCle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\networkhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:networkhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notg\u00F6r\u00FCnt\u00FCle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -87,28 +103,12 @@
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:updateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\updateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:updateform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\formnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:formnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\notsil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:notsil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|solutionrelative:class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AA1FB40-11F5-423E-99CA-E89DD90A9415}|NotAt.csproj|C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\messagedetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -126,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,43 +134,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form3.cs",
+              "RelativeToolTip": "Form3.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T18:45:52.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NetworkHelper.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NetworkHelper.cs",
               "RelativeDocumentMoniker": "NetworkHelper.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NetworkHelper.cs",
               "RelativeToolTip": "NetworkHelper.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswDMAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T20:26:18.874Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "DatabaseHelper.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\DatabaseHelper.cs",
               "RelativeToolTip": "DatabaseHelper.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T20:25:43.79Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 6,
               "Title": "UpdateForm.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\UpdateForm.cs",
               "RelativeDocumentMoniker": "UpdateForm.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\UpdateForm.cs",
               "RelativeToolTip": "UpdateForm.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T18:54:22.56Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "NotUpdate.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotUpdate.cs",
               "RelativeDocumentMoniker": "NotUpdate.cs",
@@ -182,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "NotUpdate.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotUpdate.cs",
               "RelativeDocumentMoniker": "NotUpdate.cs",
@@ -193,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "MessageDetailsForm.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\MessageDetailsForm.cs",
               "RelativeDocumentMoniker": "MessageDetailsForm.cs",
@@ -205,32 +218,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAApwEIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T16:58:49.325Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T16:58:49.325Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form3.cs",
-              "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form3.cs",
-              "RelativeToolTip": "Form3.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAUwGAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T18:45:52.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "UpdateForm.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\UpdateForm.cs",
               "RelativeDocumentMoniker": "UpdateForm.cs",
@@ -241,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "NotSil.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotSil.cs",
               "RelativeDocumentMoniker": "NotSil.cs",
@@ -253,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "NotSil.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotSil.cs",
               "RelativeDocumentMoniker": "NotSil.cs",
@@ -264,13 +264,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 7,
               "Title": "Class2.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Class2.cs",
               "RelativeDocumentMoniker": "Class2.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Class2.cs",
               "RelativeToolTip": "Class2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T12:30:32.596Z"
             },
@@ -287,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "NotG\u00F6r\u00FCnt\u00FCle.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotG\u00F6r\u00FCnt\u00FCle.cs",
               "RelativeDocumentMoniker": "NotG\u00F6r\u00FCnt\u00FCle.cs",
@@ -299,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "NotG\u00F6r\u00FCnt\u00FCle.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotG\u00F6r\u00FCnt\u00FCle.cs",
               "RelativeDocumentMoniker": "NotG\u00F6r\u00FCnt\u00FCle.cs",
@@ -310,19 +310,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "NotForm.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotForm.cs",
               "RelativeDocumentMoniker": "NotForm.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotForm.cs",
               "RelativeToolTip": "NotForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwA4AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAwwG0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T06:37:45.824Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 3,
               "Title": "NotForm.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\NotForm.cs",
               "RelativeDocumentMoniker": "NotForm.cs",
@@ -333,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "FormNotification.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\FormNotification.cs",
               "RelativeDocumentMoniker": "FormNotification.cs",
@@ -356,32 +356,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T16:45:43.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "Form4.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form4.cs",
               "RelativeDocumentMoniker": "Form4.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form4.cs",
               "RelativeToolTip": "Form4.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAvwDQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAvwD0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:18:38.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-15T16:18:38.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "Form5.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form5.cs",
               "RelativeDocumentMoniker": "Form5.cs",
@@ -393,20 +392,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Form6.cs",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form6.cs",
               "RelativeDocumentMoniker": "Form6.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form6.cs",
               "RelativeToolTip": "Form6.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAswE4AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAcwFcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T11:17:05.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T11:17:05.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "Form1.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -417,19 +415,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 8,
               "Title": "Form2.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form2.cs [Tasar\u0131m]",
               "RelativeToolTip": "Form2.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T16:58:10.438Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-08T16:58:10.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Form3.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
@@ -440,19 +437,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "Form4.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form4.cs",
               "RelativeDocumentMoniker": "Form4.cs",
               "ToolTip": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form4.cs [Tasar\u0131m]",
               "RelativeToolTip": "Form4.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T16:12:17.26Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2024-10-15T16:12:17.26Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "Form5.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form5.cs",
               "RelativeDocumentMoniker": "Form5.cs",
@@ -463,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "Form6.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\fidan\\OneDrive\\Masa\u00FCst\u00FC\\Bitirme Projesi\\NotAt\\Bitirme-Projesi\\Form6.cs",
               "RelativeDocumentMoniker": "Form6.cs",

@@ -22,28 +22,6 @@ namespace NotAt
         private void Form1_Load(object sender, EventArgs e)
         {
 
-
-
-
-            string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;Port=25060;Database=proje;User ID=doadmin;Password=AVNS_i5KKCR44-CAV6oo7xLn;SslMode=Required;";
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    MessageBox.Show("Bağlantı başarılı!");
-                    // Veritabanı işlemlerinizi burada gerçekleştirin
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show($"Bağlantı hatası: {ex.Message}");
-                }
-            }
-
-
-
-
             label1.Top = (this.ClientSize.Width - button1.Height) / 7;
 
             label1.Location = new Point(

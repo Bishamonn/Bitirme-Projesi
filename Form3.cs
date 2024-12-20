@@ -13,17 +13,25 @@ using MySql.Data;
 using static NotAt.Class2;
 using System.Net.Sockets;
 using System.Net;
+using System.Threading;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using MySqlX.XDevAPI.Common;
+using System.Security.Policy;
+using System.Diagnostics;
 
 namespace NotAt
 {
     public partial class Form3 : Form
     {
+
+
         public Form3()
         {
             InitializeComponent();
-          
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
-
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -38,27 +46,24 @@ namespace NotAt
             string kullaniciad = GlobalVariables.KullaniciAd;
             string sifre = GlobalVariables.Sifre;
 
-            // MySQL bağlantı dizesi
-            string connectionString = "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
-                                      "port=25060;" +
-                                      "database=proje;" +
-                                      "user=doadmin;" +
-                                      "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
-                                      "sslmode=Required;";
 
-            MySqlConnection baglan = new MySqlConnection(connectionString);
+            MySqlConnection baglan = new MySqlConnection(
+                "server=localhost;" +
+                "database=proje;" +
+                "user=root;" +
+                "password=123456"
+            );
             try
             {
                 baglan.Open();
-
                 string sql = "SELECT unvan FROM kullanicilar WHERE " +
-                             "kullanici_ad = @kullaniciad AND sifre = @Sifre";
-
+                    "kullanici_ad = @kullaniciad AND sifre = @Sifre";
                 string sql2 = "SELECT id FROM kullanicilar WHERE " +
-                              "kullanici_ad = @kullaniciad AND sifre = @Sifre";
+                    "kullanici_ad = @kullaniciad AND sifre = @Sifre";
 
                 MySqlCommand komut = new MySqlCommand(sql, baglan);
                 MySqlCommand komut2 = new MySqlCommand(sql2, baglan);
+
 
                 komut.Parameters.AddWithValue("@kullaniciad", kullaniciad);
                 komut.Parameters.AddWithValue("@Sifre", sifre);
@@ -66,13 +71,15 @@ namespace NotAt
                 komut2.Parameters.AddWithValue("@kullaniciad", kullaniciad);
                 komut2.Parameters.AddWithValue("@Sifre", sifre);
 
+
                 // Sorgunun sonucunu alıyoruz
                 object result = komut.ExecuteScalar();
                 object result2 = komut2.ExecuteScalar();
 
-                // Eğer sonuç null değilse kontrol edelim
+                //Eğer sonuç null değilse kontrol edelim
                 if (result != null && result.ToString() == "Admin")
                 {
+
                     GlobalVariables.kisi_id = result2.ToString();
                 }
                 else
@@ -92,6 +99,7 @@ namespace NotAt
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form5 frm5 = new Form5();
@@ -102,28 +110,48 @@ namespace NotAt
         {
             NotForm notForm = new NotForm();
             notForm.Show();
-            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             NotGörüntüle goruntu = new NotGörüntüle();
             goruntu.Show();
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             NotSil sil = new NotSil();
             sil.Show();
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             NotUpdate update = new NotUpdate();
             update.Show();
-            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    // Server uygulamasının bulunduğu yol
+                    string serverPath = @"C:\Users\fidan\OneDrive\Masaüstü\Bitirme Projesi\server\Program.cs\bin\Debug\net8.0\Program.cs.exe";
+
+                    // Sunucuyu çalıştır
+                    Process serverProcess = new Process();
+                    serverProcess.StartInfo.FileName = serverPath;
+                    serverProcess.StartInfo.CreateNoWindow = false; // Konsol penceresini gösterme
+                    serverProcess.StartInfo.UseShellExecute = false; // Yeni bir işlem başlat
+                    serverProcess.Start();
+
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Sunucu başlatılamadı: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
