@@ -99,90 +99,87 @@ namespace NotAt
 
         private void SunucuyaOtomatikBaglan()
         {
+            try
             {
+                string serverIP = "192.168.1.186"; // Sunucu IP adresi
+                int serverPort = 5000;
 
-
-                try
+                // TCP istemcisi oluştur ve sunucuya bağlan
+                using (TcpClient client = new TcpClient())
                 {
-                    string serverIP = "192.168.1.186"; // Sunucu IP adresi
-                    int serverPort = 5000;
+                    client.Connect(serverIP, serverPort);
+                    NetworkStream stream = client.GetStream();
 
-                    // TCP istemcisi oluştur ve sunucuya bağlan
-                    using (TcpClient client = new TcpClient())
+                    // Kullanıcı adı gönder
+                    string kullaniciAd = $"kullanici_ad:{GlobalVariables.KullaniciAd}";
+                    byte[] data = Encoding.UTF8.GetBytes(kullaniciAd);
+                    stream.Write(data, 0, data.Length);
+
+                    // Sunucudan gelen veriyi oku
+                    byte[] buffer = new byte[1024];
+                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                    string activeUsers = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+
+                    // Aktif kullanıcıları işleyip ComboBox'a ekle
+                    Invoke(new Action(() =>
                     {
-                        client.Connect(serverIP, serverPort);
-                        NetworkStream stream = client.GetStream();
-
-                        // Kullanıcı adı gönder
-                        string kullaniciAd = $"kullanici_ad:{GlobalVariables.KullaniciAd}";
-                        byte[] data = Encoding.UTF8.GetBytes(kullaniciAd);
-                        stream.Write(data, 0, data.Length);
-
-                        // Sunucudan gelen veriyi oku
-                        byte[] buffer = new byte[1024];
-                        int bytesRead = stream.Read(buffer, 0, buffer.Length);
-                        string activeUsers = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-
-                        // Aktif kullanıcıları işleyip ComboBox'a ekle
-                        Invoke(new Action(() =>
+                        comboBox1.Items.Clear();
+                        string[] users = activeUsers.Split(',');
+                        foreach (var user in users)
                         {
-                            comboBox1.Items.Clear();
-                            string[] users = activeUsers.Split(',');
-                            foreach (var user in users)
+                            if (!string.IsNullOrWhiteSpace(user))
                             {
-                                if (!string.IsNullOrWhiteSpace(user))
-                                {
-                                    comboBox1.Items.Add(user);
-                                }
+                                comboBox1.Items.Add(user);
                             }
-                        }));
+                        }
+                    }));
 
-                        MessageBox.Show("Sunucuya başarıyla bağlanıldı ve aktif kullanıcılar alındı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (SocketException ex)
-                {
-                    string errorMessage;
-
-                    if (ex.SocketErrorCode == SocketError.ConnectionRefused)
-                    {
-                        errorMessage = "Bağlantı reddedildi. Sunucu çalışıyor mu?";
-                    }
-                    else if (ex.SocketErrorCode == SocketError.TimedOut)
-                    {
-                        errorMessage = "Bağlantı zaman aşımına uğradı. Lütfen ağı kontrol edin.";
-                    }
-                    else if (ex.SocketErrorCode == SocketError.HostUnreachable)
-                    {
-                        errorMessage = "Sunucuya erişilemiyor. IP adresini kontrol edin.";
-                    }
-                    else
-                    {
-                        errorMessage = $"Bir hata oluştu: {ex.Message}";
-                    }
-
-                    MessageBox.Show(errorMessage, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Sunucuya bağlanılamadı: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sunucuya başarıyla bağlanıldı ve aktif kullanıcılar alındı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Sunucuya bağlanılamadı: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-    
 
+        private void KullaniciDurumuKapat()
+        {
+            try
+            {
+                string connectionString =
+                    "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+                    "port=25060;" +
+                    "database=proje;" +
+                    "user=doadmin;" +
+                    "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+                    "sslmode=Required;";
 
-       
-        
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE kullanicilar SET aktif = 0, ip_adresi = '0.0.0.0' WHERE kullanici_ad = @kullaniciAd";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@kullaniciAd", GlobalVariables.KullaniciAd);
+
+                    cmd.ExecuteNonQuery();
+
+                    Console.WriteLine($"Kullanıcı durumu sıfırlandı: {GlobalVariables.KullaniciAd}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Kullanıcı durumunu sıfırlama hatası: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void NotForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            // Kullanıcı kapatıldığında aktif durumunu sıfırla
+            KullaniciDurumuKapat();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Alıcı seçildiğinde yapılacak işlemler
-        }
+        
     }
 }

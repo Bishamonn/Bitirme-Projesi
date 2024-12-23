@@ -98,6 +98,33 @@ namespace NotAt
             }
 
         }
+        private void ResetAllUserStatus()
+        {
+            string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;Port=25060;Database=proje;Uid=doadmin;Pwd=AVNS_i5KKCR44-CAV6oo7xLn;SslMode=Required;";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // SQL_SAFE_UPDATES modunu kapat
+                    string disableSafeUpdates = "SET SQL_SAFE_UPDATES = 0;";
+                    MySqlCommand disableCmd = new MySqlCommand(disableSafeUpdates, conn);
+                    disableCmd.ExecuteNonQuery();
+
+                    // Tüm kullanıcıların aktiflik ve IP adreslerini sıfırla
+                    string resetQuery = "UPDATE kullanicilar SET aktif = 0, ip_adresi = '0.0.0.0'";
+                    MySqlCommand resetCmd = new MySqlCommand(resetQuery, conn);
+                    int rowsAffected = resetCmd.ExecuteNonQuery();
+
+                    MessageBox.Show($"Tüm kullanıcı durumları sıfırlandı. {rowsAffected} kullanıcı güncellendi.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Kullanıcı durumlarını sıfırlama sırasında bir hata oluştu: " + ex.Message);
+                }
+            }
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,7 +168,7 @@ namespace NotAt
                     // Sunucuyu çalıştır
                     Process serverProcess = new Process();
                     serverProcess.StartInfo.FileName = serverPath;
-                    serverProcess.StartInfo.CreateNoWindow = false; // Konsol penceresini gösterme
+                    serverProcess.StartInfo.CreateNoWindow = true; // Konsol penceresini gösterme
                     serverProcess.StartInfo.UseShellExecute = false; // Yeni bir işlem başlat
                     serverProcess.Start();
 
@@ -152,6 +179,27 @@ namespace NotAt
                     MessageBox.Show($"Sunucu başlatılamadı: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Kullanıcı durumlarını sıfırla
+            ResetAllUserStatus();
+
+            // Kapanış mesajı
+            MessageBox.Show("Sunucu kapatıldı ve tüm kullanıcı durumları sıfırlandı.");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Kullanıcı durumlarını sıfırla
+            ResetAllUserStatus();
+
+            // Kapanış mesajı
+            MessageBox.Show("Sunucu kapatıldı ve tüm kullanıcı durumları sıfırlandı.");
+
+         
+       
         }
     }
 }
