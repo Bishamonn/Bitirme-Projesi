@@ -101,7 +101,7 @@ namespace NotAt
         {
             try
             {
-                string serverIP = "192.168.1.186"; // Sunucu IP adresi
+                string serverIP = "169.254.155.247"; // Sunucu IP adresi
                 int serverPort = 5000;
 
                 // TCP istemcisi oluştur ve sunucuya bağlan

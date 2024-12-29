@@ -32,7 +32,11 @@ namespace NotAt
             string sifre = textBox2.Text;
 
             // MySQL veritabanı bağlantısı
-            string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;Port=25060;Database=proje;Uid=doadmin;Pwd=AVNS_i5KKCR44-CAV6oo7xLn;SslMode=Required;";
+            string connectionString = "Server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com; " +
+                "Port=25060; " +
+                "Database=proje; " +
+                "Uid=doadmin;Pwd=AVNS_i5KKCR44-CAV6oo7xLn; " +
+                "SslMode=Required;";
             using (MySqlConnection baglan = new MySqlConnection(connectionString))
             {
                 try
@@ -95,7 +99,7 @@ namespace NotAt
                 catch (Exception ex)
                 {
                     // Hata oluşursa mesajı göster
-                    MessageBox.Show("Hata: " + ex.Message);
+                    Console.WriteLine("Hata: " + ex.Message);
                 }
             }
         }

@@ -61,11 +61,13 @@ namespace NotAt
 
 
             MySqlConnection baglan = new MySqlConnection(
-                "server=localhost;" +
-                "database=proje;" +
-                "user=root;" +
-                "password=123456"
-            );
+    "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+    "port=25060;" +
+    "database=proje;" +
+    "user=doadmin;" +
+    "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+    "SslMode=Required;"
+);
             try
             {
                 baglan.Open();
