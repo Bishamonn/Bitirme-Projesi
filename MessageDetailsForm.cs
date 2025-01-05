@@ -75,8 +75,7 @@ namespace NotAt
         {
             string formattedMessage = "\n" + mesaj;
             richTextBox1.Text = formattedMessage;
-            // Örneğin, mesajı bir Label veya TextBox kontrolüne yazdırabilirsiniz
-            
+
         }
 
         private void MessageDetailsForm_Load(object sender, EventArgs e)

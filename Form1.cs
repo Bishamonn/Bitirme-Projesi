@@ -25,9 +25,9 @@ namespace NotAt
             label1.Top = (this.ClientSize.Width - button1.Height) / 7;
 
             label1.Location = new Point(
-        (this.ClientSize.Width - label1.Width) / 2, // Yatay ortalama
-        label1.Location.Y // Mevcut dikey konumu korur
-        );
+            (this.ClientSize.Width - label1.Width) / 2, // Yatay ortalama
+            label1.Location.Y // Mevcut dikey konumu korur
+            );
             button1.Left = (this.ClientSize.Width - button1.Width) / 2;
             button2.Left = (this.ClientSize.Width - button1.Width) / 2;
 

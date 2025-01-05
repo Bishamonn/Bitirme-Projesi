@@ -11,12 +11,13 @@ namespace NotAt
 {
     internal class DatabaseHelper
     {
-        private readonly string connectionString = "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
-                                                   "port=25060;" +
-                                                   "database=proje;" +
-                                                   "user=doadmin;" +
-                                                   "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
-                                                   "sslmode=Required;";
+        private readonly string connectionString = 
+            "server=notat-db-do-user-18525492-0.h.db.ondigitalocean.com;" +
+            "port=25060;" +
+            "database=proje;" +
+            "user=doadmin;" +
+            "password=AVNS_i5KKCR44-CAV6oo7xLn;" +
+            "sslmode=Required;";
 
         public List<ComboBoxItem> GetKullaniciListesi(string excludeUser)
         {
